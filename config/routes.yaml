@@ -63,4 +63,6 @@ valid_experiences:
     
     
     
-    
+admin:
+    path: /admin
+    controller: App\Controller\LuckyController::admin

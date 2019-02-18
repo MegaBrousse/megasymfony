@@ -64,5 +64,11 @@ public function create () {
 
     }
     
+     public function admin()
+    {
+        return new Response('<html><body>Admin page!</body></html>');
+    }
+
+    
     
 }

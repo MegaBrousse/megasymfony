@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MegaBrousse - Curriculum Vitae</title>
+<title>Yannis Brousset</title>
 
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
@@ -58,68 +58,61 @@
 				<h1>Work Experience</h1>
 				
 								
-									<a href="{{ path('form_formation') }}">Add</a>
+								
 								
 
 			</div>
 			
 			<div class="sectionContent">
-				<article>
-					
-				<h2>{% for formation in formation %}
-					{{formation.getName() }}
-					<a href="{{ path('form_formation_edit') }}">Edit</a>
-									<a href="{{ path('form_formation_remove') }}">Remove</a>
-					{% endfor %}</h2>
-					
-					<p class="subDetails">{% for formation in formation %}
-					{{formation.getLieu() }}
-					{% endfor %}</p>
-					
-						<p class="subDetails">{% for formation in formation %}
-					{{formation.getLieu() }}  
-					{% endfor %}</p>
-					
-					<p> {% for formation in formation %}
-					{{formation.getDescription() }}
-					{% endfor %}</p>
-				</article>
+			
+					{% for formation in formation %}
+			<article>
+				<h2>{{formation.getName() }} </h2>
 				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">Janruary 2007 - March 2011</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
+					<p class="subDetails">
+				<h5>{{formation.getLieu() }} </h5>  
 				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">October 2004 - December 2006</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
+					<p class="subDetails"></p>
+					<p>
+				<h3>{{formation.getDescription() }}</h3> </p>
+				
+							{% if is_granted('ROLE_ADMIN') %}
+								<a href="{{ path('formation_show', {'id': formation.id}) }}">add</a>
+				
+								<a href="{{ path('formation_edit', {'id': formation.id}) }}">edit</a>
+						     
+						     	<a href="{{ path('formation_delete', {'id': formation.id}) }}">delete</a>
+						     {% endif %}
+						 
+					{% endfor %}</p>
+			</article>
+			
 			</div>
 			<div class="clear"></div>
 		</section>
 		
 		
 		<section>
-			<div class="sectionTitle">
+			<div class="sectionTitle">	 {% for loisirs in loisirs %}
 				<h1>Loisirs</h1>
+				{% if is_granted('ROLE_ADMIN') %}
+				<a href="{{ path('loisirs_edit', {'id': loisirs.id}) }}">edit</a>
+						     
+					<a href="{{ path('loisirs_delete', {'id': loisirs.id}) }}">delete</a>
+				  {% endif %}
 			</div>
 			
 			<div class="sectionContent">
-				<ul class="keySkills">
-				 {% for loisirs in loisirs %}
+			<p>	<ul class="keySkills">
+			
+				 
+				 	
 					<li>{{loisirs.getName() }}</li>
-					{% endfor %}
-				{% for loisirs in loisirs %}
+					
 					<li>{{loisirs.getName() }}</li>
-					{% endfor %}
-				{% for loisirs in loisirs %}
-					<li>{{loisirs.getName() }}</li>
-					{% endfor %}
-				{% for loisirs in loisirs %}
-					<li>{{loisirs.getName() }}</li>
-					{% endfor %}
+					
+				
+					{% endfor %} </p>
 				
 				</ul>
 			</div>

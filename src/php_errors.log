@@ -1,0 +1,2 @@
+[18-Feb-2019 13:32:23 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/DefaultController.php on line 10
+[18-Feb-2019 13:32:32 UTC] PHP Fatal error:  Class 'Symfony\Bundle\FrameworkBundle\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/DefaultController.php on line 10
