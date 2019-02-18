@@ -36,6 +36,7 @@
 		</div>
 		<div class="clear"></div>												
 	</div>
+																				
 
 	<div id="mainArea" class="quickFade delayFive">
 		<section>
@@ -55,13 +56,20 @@
 		<section>
 			<div class="sectionTitle">
 				<h1>Work Experience</h1>
+				
+								
+									<a href="{{ path('form_formation') }}">Add</a>
+								
+
 			</div>
 			
 			<div class="sectionContent">
 				<article>
 					
-					{% for formation in formation %}
-					<h2>{{formation.getName() }}
+				<h2>{% for formation in formation %}
+					{{formation.getName() }}
+					<a href="{{ path('form_formation_edit') }}">Edit</a>
+									<a href="{{ path('form_formation_remove') }}">Remove</a>
 					{% endfor %}</h2>
 					
 					<p class="subDetails">{% for formation in formation %}

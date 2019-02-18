@@ -2,25 +2,24 @@
 
 namespace App\Form;
 
-use App\Entity\Gateau;
+use App\Entity\Loisirs;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class GateauType extends AbstractType
+class LoisirsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom')
-            ->add('dureePrepa')
+            ->add('name')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Gateau::class,
+            'data_class' => Loisirs::class,
         ]);
     }
 }

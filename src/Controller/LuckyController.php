@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\Formation;
 use App\Entity\Loisirs;
-use App\Entity\experiences;
+use App\Entity\Experiences;
 
 class LuckyController extends Controller
 {
@@ -23,7 +23,7 @@ class LuckyController extends Controller
         ->findAll();
 
         $experiences = $this->getDoctrine()
-        ->getRepository(experiences::class)
+        ->getRepository(Experiences::class)
         ->findAll();
         // return new Response(
         //    '<html><body>Lucky number: '.$number.'</body></html>'
@@ -56,8 +56,8 @@ public function create () {
     $eManager->persist($form);
     $eManager->flush();
     
-      $form = new experiences();
-    $form->setName('experiences');
+      $form = new Experiences();
+    $form->setName('Experiences');
     $eManager = $this->getDoctrine()->getManager();
     $eManager->persist($form);
     $eManager->flush();

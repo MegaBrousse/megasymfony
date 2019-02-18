@@ -13,7 +13,9 @@ app_lucky_number:
     path: /lucky/number
     controller: App\Controller\LuckyController::number
     
-form _formation: 
+    
+    
+form_formation: 
     path: /formation/create
     controller: App\Controller\FormationController::create
     
@@ -21,13 +23,18 @@ form_formation_edit:
     path: /formation/edit/(id)
     controller: App\Controller\FormationController::edit
     
+form_formation_remove: 
+    path: /formation/remove/(id)
+    controller: App\Controller\FormationController::remove    
+    
 valid_formation: 
     path: /formation/valid_formation
     controller: App\Controller\FormationController::valid
  
     
     
-form _loisirs: 
+    
+form_loisirs: 
     path: /loisirs/create
     controller: App\Controller\LoisirsController::create
     
@@ -41,7 +48,8 @@ valid_loisirs:
     
     
     
-form _experiences: 
+    
+form_experiences: 
     path: /experiences/create
     controller: App\Controller\ExperiencesController::create
     
@@ -52,3 +60,7 @@ form_experiences_edit:
 valid_experiences: 
     path: /experiences/valid_experiences
     controller: App\Controller\ExperiencesController::valid
+    
+    
+    
+    

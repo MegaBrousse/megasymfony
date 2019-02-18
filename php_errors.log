@@ -1,1 +1,5 @@
 [04-Feb-2019 14:14:54 UTC] PHP Fatal error:  Cannot redeclare App\Controller\LuckyController::create() in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 51
+[18-Feb-2019 10:37:04 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/my_cv/src/Form/GateauType.php on line 3
+[18-Feb-2019 10:38:01 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/my_cv/src/Form/GateauType.php on line 3
+[18-Feb-2019 10:38:07 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/my_cv/src/Form/GateauType.php on line 3
+[18-Feb-2019 10:45:27 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/ubuntu/workspace/my_cv/src/Form/GateauType.php on line 3
