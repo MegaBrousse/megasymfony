@@ -24,14 +24,14 @@
 																												
 		<div id="name">
 			<h1 class="quickFade delayTwo">Yannis Brousset</h1>
-			<h2 class="quickFade delayThree">Google CEO</h2>
+			<h2 class="quickFade delayThree">Etudiant Multimédia & Internet</h2>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-				<li>e: <a href="mailto:joe@bloggs.com" target="_blank">joe@bloggs.com</a></li>
-				<li>w: <a href="http://www.bloggs.com">www.bloggs.com</a></li>
-				<li>m: 01234567890</li>
+				<li>e: <a href="mailto:joe@bloggs.com" target="_blank">yannis.brousset@gmail.com</a></li>
+				<li>w: <a href="http://www.bloggs.com">www.yannisbrousset.com</a></li>
+				<li>m: 0699447867</li>
 			</ul>
 		</div>
 		<div class="clear"></div>												
@@ -42,11 +42,15 @@
 		<section>
 			<article>
 				<div class="sectionTitle">
-					<h1>Personal Profile</h1>
+					<h1>Profil</h1>
 				</div>
 				
 				<div class="sectionContent">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<p>Mes études m’ont permis d'acquérir 
+				une bonne maîtrise des spécificités du web et de son contenu. Avec mon bac Littéraire, j’ai acquis au 
+				fil des ans une bonne plume, désormais adaptée aux nouveaux enjeux d’Internet. J’ai également de bonnes 
+				bases des outils graphiques tels Photoshop et Illustrator. C’est ce panel de compétences que j’aimerais 
+				mettre à contribution aujourd'hui dans le monde professionnel.</p>
 				</div>
 			</article>
 			<div class="clear"></div>
@@ -55,7 +59,7 @@
 		
 		<section>
 			<div class="sectionTitle">
-				<h1>Work Experience</h1>
+				<h1>Experiences</h1>
 				
 								
 								
@@ -95,11 +99,7 @@
 		<section>
 			<div class="sectionTitle">	 {% for loisirs in loisirs %}
 				<h1>Loisirs</h1>
-				{% if is_granted('ROLE_ADMIN') %}
-				<a href="{{ path('loisirs_edit', {'id': loisirs.id}) }}">edit</a>
-						     
-					<a href="{{ path('loisirs_delete', {'id': loisirs.id}) }}">delete</a>
-				  {% endif %}
+			
 			</div>
 			
 			<div class="sectionContent">
@@ -111,6 +111,11 @@
 					
 					<li>{{loisirs.getName() }}</li>
 					
+						{% if is_granted('ROLE_ADMIN') %}
+				<a href="{{ path('loisirs_edit', {'id': loisirs.id}) }}">edit</a>
+						     
+					<a href="{{ path('loisirs_delete', {'id': loisirs.id}) }}">delete</a>
+				  {% endif %}
 				
 					{% endfor %} </p>
 				
@@ -127,15 +132,15 @@
 			
 			<div class="sectionContent">
 				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+					<h2>DUT MMI</h2>
+					<p class="subDetails">Université Grenoble Alpes</p>
+					<p>Métiers du Multimédia et de l'Internet, spécialité Audiovisuel</p>
 				</article>
 				
 				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+					<h2>Licence LLCE Anglais (2 ans)</h2>
+					<p class="subDetails">Université Toulouse II Jean Jaures</p>
+					<p>Langue, Littérature & Civilisation Etrangère, mineure Cinéma</p>
 				</article>
 			</div>
 			<div class="clear"></div>
